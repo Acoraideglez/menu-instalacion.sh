@@ -1,13 +1,13 @@
 #!/bin/bash
 while :
 do
-	PS3="elija una opcion"
-	select opt in "Instalar Cowsay" "Instalar SL" "Instalar Net-Tools" "Salir"
+	Nintendo="elija una opcion"
+	select opt in "Instalar Sistema" "Instalar Camara" "Instalar Net-Tools" "Salir"
 	do
 	    case $opt in
-		"Instalar Cowsay")
-			echo "Has selecionado instalar cowsay"
-			if which cowsay 2> /dev/null;
+		"Instalar Sistema")
+			echo "Has selecionado instalar Sistema"
+			if which Sistema 2> /dev/null;
 			then
 				echo "el programa está instalado"
 				echo "¿Desea desinstalarlo?"
@@ -15,8 +15,8 @@ do
 				do
 					case $confirmar in
 						"si")
-							echo "se ha desinstalado cowsay"
-							apt remove -y cowsay
+							echo "se ha desinstalado Sistema"
+							apt remove -y Sistema
 						;;
 						"no")
 							break
@@ -25,12 +25,12 @@ do
 					esac
 				done
 			else
-				sudo apt install -y cowsay
+				sudo apt install -y Sistema
 			fi
 	            ;;
 		"Instalar SL")
-			 echo "Has selecionado Instalar SL"
-	                if which sl 2> /dev/null;
+			 echo "Has selecionado Instalar Camara"
+	                if which Camara 2> /dev/null;
 	                then
 	                        echo "el programa está instalado"
 	                        echo "¿Desea desinstalarlo?"
@@ -39,7 +39,7 @@ do
 	                        do
 	                                case $opt in
 	                                        "si")
-	                                                echo "se ha desinstalado sl"
+	                                                echo "se ha desinstalado Camara"
 	                                                apt remove -y sl
 	                                        ;;
 	                                        "no")
@@ -49,7 +49,7 @@ do
 	                                        esac
 	                                done
 	                else
-	                        sudo apt install -y  sl
+	                        sudo apt install -y  Camara
 	                fi
 	            ;;
 		"Instalar Net-Tools")
