@@ -28,7 +28,7 @@ do
 				sudo apt install -y Sistema
 			fi
 	            ;;
-		"Instalar SL")
+		"Instalar Camara")
 			 echo "Has selecionado Instalar Camara"
 	                if which Camara 2> /dev/null;
 	                then
