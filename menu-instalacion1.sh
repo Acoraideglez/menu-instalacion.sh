@@ -2,7 +2,7 @@
 while :
 do
 	Nintendo="elija una opcion"
-	select opt in "Instalar Sistema" "Instalar Camara" "Instalar Net-Tools" "Salir"
+	select opt in "Instalar Sistema" "Instalar Camara" "Instalar Juego" "Salir"
 	do
 	    case $opt in
 		"Instalar Sistema")
@@ -52,8 +52,8 @@ do
 	                        sudo apt install -y  Camara
 	                fi
 	            ;;
-		"Instalar Net-Tools")
-			 echo "Has selecionado instalar las Net-Tools"
+		"Instalar Juego")
+			 echo "Has selecionado instalar Juego"
 	                if which ifconfig 2> /dev/null;
 	                then
 	                        echo "el programa está instalado"
@@ -63,7 +63,7 @@ do
 	                        do
 	                                case $opt in
 	                                        "si")
-	                                                echo "se ha desinstalado las net-tools"
+	                                                echo "se ha desinstalado el Juego"
 	                                                apt remove -y net-tools
 	                                        ;;
 	                                        "no")
